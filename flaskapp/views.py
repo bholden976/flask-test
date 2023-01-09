@@ -1,6 +1,6 @@
-from flask import *
-
-app = Flask(__name__)
+from datetime import datetime
+from flask import Flask, render_template
+from . import app
 
 @app.route("/")
 def home():
@@ -10,6 +10,3 @@ def home():
 def flower():
     return render_template("/flower.html", is_flower = 'active')
 
-
-if __name__ == "__main__":
-    app.run(debug=True)
